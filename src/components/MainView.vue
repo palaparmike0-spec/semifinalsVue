@@ -1,13 +1,25 @@
 <script setup>
-import EventForm from './components/EventForm.vue'
-import EventList from './components/EventList.vue'
+import { ref, watch } from 'vue'
+import EventForm from './EventForm.vue'
+import EventList from './EventList.vue'
+
+const savedEvent = localStorage.getItem('events')
+const events = ref(savedEvent ? JSON.parse(savedEvent) : [])
+
+watch(
+  events,
+  (updatedEvents) => {
+    localStorage.setItem('events', JSON.stringify(updatedEvents))
+  },
+  { deep: true },
+)
 
 function handleEventReceived(message) {
-  console.log('Event submitted:', message)
+  events.value.push(message)
 }
 </script>
 
 <template>
-  <EventForm />
-  <EventList @submit="handleEventReceived" />
+  <EventForm @submit="handleEventReceived" />
+  <EventList :events="events" />
 </template> 

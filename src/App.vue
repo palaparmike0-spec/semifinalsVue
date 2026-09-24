@@ -4,7 +4,8 @@
 <template>
 
   <div>
-    <MainPage />
+    <MainPage  />
+    <br>
     <br>
     <RouterView />
   </div>

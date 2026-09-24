@@ -18,6 +18,6 @@ const props = defineProps({
     <p>Organizer: {{ props.organizer }}</p>
     <p>Event Type: {{ props.eventtype }}</p>
     <p>Date: {{ props.date }}</p>
-    <p v-if="attendance">Attended: {{ props.attendance }}</p>
+    <p v-if="props.attendance">Attended: {{ props.attendance }}</p>
  </div>
 </template>

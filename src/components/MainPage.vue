@@ -1,10 +1,10 @@
 <template>
       <nav class="navbar navbar-expand-lg bg-primary navbar-light shadow-sm">
   <div class="container">
-    <RouterLink to="/" class="navbar-brand text-white fw-bold">
+    <!-- <RouterLink to="/" class="navbar-brand text-white fw-bold">
       My Website
-    </RouterLink>
-    <button
+    </RouterLink> -->
+    <!-- <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
@@ -14,7 +14,7 @@
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> -->
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
